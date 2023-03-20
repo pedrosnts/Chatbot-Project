@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Login Page</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="#">Free delivery on all orders over €50 | Secure Payment</a></li>
+            </ul>
+        </nav>
+    
+        <header>
+            <div class="header-container">
+                <div class="header-left">
+                    <h2>Fashion Stuff</h2>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                    <h4>Men&nbsp;&nbsp;&nbsp;    Women&nbsp;&nbsp;&nbsp;    Kids</h4>
+                </div>
+                <div class="header-right">
+                    <div class="header-login">
+                        <a href="#">Sign In / Register</a>
+                    </div>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                    <div class="header-basket">
+                        <a href="#">Basket</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <main class="main">
+            <br>
+
+            <br>
+                <div class="container">
+                    <form class="form" action="#" method="post">
+                        <p>Enter your user name:</p>
+                        <input type="text" name="nm" placeholder="user" class="insert" required />
+                        <p>Password:</p>
+                        <input type="password" name="pass" placeholder="password" autocomplete="off" class="insert" required />
+                        <input type="submit" value="submit" class="btn" />
+                    </form>
+                </div>
+</body>
+        <style>
+            .main {
+                height: 75vh;
+                
+            }
+            .container {
+                background-color: rgb(255, 255, 255);
+                display: flex;
+                justify-content: space-between;
+                margin: 10px;
+            }
+        </style>
+
+        </main>
+        
+    
+        <footer>
+            <a href="/"><button class="underline">Back to CS</button></a>
+        </footer>
+</body>
+</html>

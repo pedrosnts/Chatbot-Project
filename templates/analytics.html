@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Analytics Page</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Free delivery on all orders over €50 | Secure Payment</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="header-container">
+            <div class="header-left">
+                <h2>Fashion Stuff</h2>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                <h4>Men&nbsp;&nbsp;&nbsp;    Women&nbsp;&nbsp;&nbsp;    Kids</h4>
+            </div>
+            <div class="header-right">
+                <div class="header-login">
+                    <a href="#">Sign In / Register</a>
+                </div>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                <div class="header-basket">
+                    <a href="#">Basket</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <br>
+        <center><h2>Bot Analytics Page</h2></center>
+        <br>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This page is meant to display information in regards to the bot`s performance</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All information is displayed in real Time</p>
+        <br>
+        <div style="display:flex;">
+            <div style="flex: 1">
+                <img src = "{{ plot_url }}?{{ random }}" alt="Bar Chart">
+            </div>
+            <div style="flex: 1">
+                <img src = "{{ plot_name2 }}?{{ random }}" alt="Time Chart">
+            </div> 
+        </div>       
+        <br>
+         
+        <br>
+        <table>
+            {{ data | safe }}
+        </table>
+    </main>
+    <style>
+        main {
+        background-color: rgb(177, 224, 224);
+    }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: #333;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+
+    <footer>
+        <a href="/"><button class="underline">Back to CS</button></a>
+    </footer>
+
+</body>
+</html>
+
